@@ -59,8 +59,7 @@ const Home: NextPage = () => {
           <p>
             You are invited to participate in the online study Influence of
             Logics in Featured Snippets on Opinion Making initiated and
-            conducted by Markus Bink, Sebastian Schwarz, Tim Draws and Dr. David
-            Elsweiler. The research is supervised by at the University of
+            conducted by Tobias Wittl, Georg Dechant, Patrick Balla and Markus Stangl. The research is supervised by at the University of
             Regensburg. Please note:
           </p>
           <ul>

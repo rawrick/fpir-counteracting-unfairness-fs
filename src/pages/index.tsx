@@ -189,12 +189,6 @@ const Home: NextPage = () => {
               <span>I have read and understood the consent form.</span>
             </label>
           </p>
-          <Input
-            label="Please enter your Prolific ID"
-            placeholder="ProlificID"
-            onChange={(e) => setProlificId(e.target.value)}
-            required
-          />
           <Button isLoading={isSubmitting} disabled={isSubmitting}>
             Continue
           </Button>

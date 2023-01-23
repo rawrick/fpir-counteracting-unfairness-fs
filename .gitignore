@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# compile
+package-lock.json
+
 # production
 /build
 

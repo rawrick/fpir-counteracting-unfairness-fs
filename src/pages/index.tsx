@@ -57,14 +57,12 @@ const Home: NextPage = () => {
         <h2>Informed Consent of Participation</h2>
         <section className="space-y-4">
           <p>
-            You are invited to participate in the online study Influence of
-            Logics in Featured Snippets on Opinion Making initiated and
-            conducted by Tobias Wittl, Georg Dechant, Patrick Balla and Markus Stangl. The research is supervised by at the University of
-            Regensburg. Please note:
+            You are invited to participate in the online study Unfairness in Featured Snippets initiated and
+            conducted by Tobias Wittl, Georg Dechant, Patrick Balla and Markus Stangl. The research is supervised by at the University of Regensburg. Please note:
           </p>
           <ul>
             <li>Your participation is entirely voluntary</li>
-            <li>The online study will last approximately 3–4 minutes</li>
+            <li>The online study will last approximately ??? minutes</li>
             <li>
               We will record basic personal demographics (age, gender, etc.)
             </li>
@@ -78,7 +76,7 @@ const Home: NextPage = () => {
           <p>
             If you have any questions or complaints about the whole informed
             consent process of this research study or your rights as a human
-            reserach subject, please contact Dr. David Elsweiler (E-Mail:
+            research subject, please contact Dr. David Elsweiler (E-Mail:
             david.elsweiler@ur.de). You should carefully read the information
             below. Please take as much time as you need to read the consentform.
           </p>
@@ -86,8 +84,8 @@ const Home: NextPage = () => {
         <section className="space-y-4">
           <h2>1. Purpose and Goal of this Research</h2>
           <p>
-            To explore the influence of the make up of featured snippets when
-            search engines are used to form an opinon on a topic. Your
+            To explore the influence of visualisations on the fairness of featured snippets when
+            search engines are used to form an opinion on a topic. Your
             participation will help us achieve this goal. The results of this
             research may be presented at scientific or professional meetings or
             published in scientific proceedings and journals.
@@ -97,8 +95,8 @@ const Home: NextPage = () => {
           <h2>2. Participation and Compensation</h2>
           <p>
             Your participation in this online study is completely voluntary. You
-            will be one of approximately 10 people being surveyed in this pilot
-            study. You will receive 0.60 GBP as compensation for your
+            will be one of approximately 45 people being surveyed in this pilot
+            study. You may receive ??? VP as compensation for your
             participation. You may withdraw and discontinue participation at any
             time without penalty or loss of compensation. If you decline to
             participate or withdraw from the online study, no one will be told.
@@ -113,13 +111,12 @@ const Home: NextPage = () => {
           <ol>
             <li>read and accept the declaration of consent</li>
             <li>indicate your position on the topics indicated</li>
-            <li>explain your arguments for your stance</li>
             <li>interact with a series of search results</li>
             <li>restate your position and arguments on this issue</li>
           </ol>
           <p>
             Through pre-testing we estimate the completion of this online study
-            to last approximately 3-4 minutes.
+            to last approximately ?-? minutes.
           </p>
         </section>
         <section className="space-y-4">
@@ -129,7 +126,7 @@ const Home: NextPage = () => {
             inconveniences will be minor and are not likely to happen. If any
             discomforts become a problem, you may discontinue your
             participation. Your benefit in participating is your compensation of
-            0.60 GBP.
+            ??? VP.
           </p>
         </section>
         <section className="space-y-4">
@@ -172,8 +169,10 @@ const Home: NextPage = () => {
             feel free to contact:
           </p>
           <ul>
-            <li>Markus Bink (markus.bink@student.ur.de)</li>
-            <li>Sebastian Schwarz (sebastian.schwarz@student.ur.de)</li>
+            <li>Tobias Wittl (Tobias.Wittl@stud.uni-regensburg.de)</li>
+            <li>Georg Dechant (Georg.Dechant@stud.uni-regensburg.de)</li>
+            <li>Patrick Balla (Patrick.Balla@stud.uni-regensburg.de)</li>
+            <li>Markus Stangl (Markus.Stangl@stud.uni-regensburg.de)</li>
           </ul>
         </section>
 

@@ -22,6 +22,21 @@ const questions = [
     question: "Is Obesity a Disease?",
     value: null,
   },
+  {
+    topic: "cellPhoneRadiation",
+    question: "Is cell phone radiation safe?",
+    value: null,
+  },
+  {
+    topic: "zoosExist",
+    question: "Should Zoos exist?",
+    value: null,
+  },
+  {
+    topic: "networkingSociety",
+    question: "Are social networking sites good for our society?",
+    value: null,
+  },
 ];
 
 interface LikertQuestion {
@@ -80,6 +95,21 @@ const PreStudy = () => {
       // Add random mildStance to the cookie
       const randomMildStance =
         mildStances[Math.floor(Math.random() * mildStances.length)];
+      console.log(typeof mildStances);
+
+      let workStances = mildStances;
+      if (workStances.length >= 3) {
+        workStances.sort(() => Math.random() - 0.5)
+
+        Cookies.set("topicOne", workStances[0]["topic"]);
+        Cookies.set("topicTwo", workStances[1]["topic"]);
+        Cookies.set("topicThree", workStances[2]["topic"]);
+      } else {
+        router.push("/thank-you");
+        return;
+      }
+      
+      Cookies.set("mildTopics", mildStances);
       Cookies.set("topic", randomMildStance.topic);
 
       router.push("/pre-task");

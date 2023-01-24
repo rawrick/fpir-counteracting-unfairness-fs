@@ -15,8 +15,11 @@ const PreTask: NextPage = () => {
   const [snippetId, setSnippetId] = useState<number>();
   const userId = Cookies.get("userId");
   const topic = Cookies.get("topic");
+  const mildTopic = Cookies.get("mildTopics")
   const stance = Cookies.get("stance");
   const router = useRouter();
+
+  console.log(typeof mildTopic);
 
   preventBackButton();
 

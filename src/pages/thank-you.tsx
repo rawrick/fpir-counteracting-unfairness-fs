@@ -15,15 +15,6 @@ const ThankYou: NextPage = () => {
         <div className="space-y-2">
           <p>You've done it! Thank you for your participation.</p>
         </div>
-        <div className="space-y-6">
-          <p>
-            To record that you have completed the task, please click on the
-            button that takes you back to the Prolific platform.
-          </p>
-          <Link href="https://app.prolific.co/submissions/complete?cc=CV7H9VDU">
-            <Button>Back to Prolific</Button>
-          </Link>
-        </div>
       </PageContainer>
     </>
   );

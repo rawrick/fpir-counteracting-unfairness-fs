@@ -131,6 +131,138 @@
       "url": "https://www.theglobeandmail.com/life/health-and-fitness/health-advisor/why-we-should-consider-obesity-a-disease/article16370893/",
       "credibility": 1,
       "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 71444,
+      "title": "Zoos: Pitiful Prisons | PETA",
+      "text": "Zoo babies are crowd-pleasers, but breeding programs—under the guise of species preservation—inevitably result in a surplus of less “cute” adult animals. Zoos routinely trade, loan, sell, or barter adult animals they no longer want. A chimpanzee named Edith is one example of a discarded zoo baby who fell into the wrong hands.",
+      "stance": -3,
+      "logic": "???",
+      "url": "https://www.peta.org/issues/animals-in-entertainment/animals-used-entertainment-factsheets/zoos-pitiful-prisons/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 14881,
+      "title": "10 Reasons Why Zoos Are Bad and Should Be Banned • Pop ...",
+      "text": "One of the biggest reasons <b>why</b> <b>zoos</b> are bad is because there aren’t any proper laws to be followed when it comes to providing these animals with protection and as far as there isn’t any, <b>zoos</b> <b>should</b> be <b>banned</b>. 3. <b>Zoos</b> Do Not Offer Sufficient Space A tiger locked in its cage",
+      "stance": -3,
+      "logic": "???",
+      "url": "https://poplisticle.com/animals/10-reasons-why-zoos-are-bad-and-should-be-banned/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 12365,
+      "title": "How Do Zoos Help Endangered Animals? - Scientific American",
+      "text": "Zoos also use SSPs as research tools to better understand wildlife biology and population dynamics, and to raise awareness and funds to support field projects and habitat protection for specific ...",
+      "stance": 2,
+      "logic": "???",
+      "url": "https://www.scientificamerican.com/article/how-do-zoos-help-endangered-animals/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 80602,
+      "title": "The Case for Zoos: A Scientist’s Perspective | Zoological ...",
+      "text": "The Case for Zoos: A Scientist’s Perspective . ... How can zoos justify their ongoing existence in this modern age, when information and images of any species under the sun is just a click of the mouse away? Certainly this is a question that even I still ask myself occasionally, two years away from my 30 year anniversary as a veterinarian and ...",
+      "stance": 2,
+      "logic": "???",
+      "url": "https://www.zsl.org/blogs/wild-science/the-case-for-zoos-a-scientists-perspective",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 55237,
+      "title": "Facebook is ‘destroying’ society and ... - The Independent",
+      "text": "A former Facebook executive has spoken out against the site, saying it is “destroying how society works”. Chamath Palihapitiya, who was the company’s vice president of user growth from 2007 ...",
+      "stance": -3,
+      "logic": "???",
+      "url": "https://www.independent.co.uk/life-style/gadgets-and-tech/news/facebook-society-destroy-social-media-network-users-damage-communicate-connect-chamath-palihapitiya-a8105131.html",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 67183,
+      "title": "Negative Effects of Social Networking Sites for Students ...",
+      "text": "Daily overuse of these social networking sites tends to have a negative effect on the health of all students as it makes them more susceptible to various health problems in the future.",
+      "stance": -2,
+      "logic": "???",
+      "url": "https://www.business2community.com/social-media/negative-effects-of-social-networking-sites-for-students-0311887",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 10216,
+      "title": "Social networking is about real friends | Media | The Guardian",
+      "text": "The lazy arguments against social networking sites are really very boring now: &quot;I&#39;d rather meet Face-to-Facebook&quot; might have been faintly entertaining the first time you said it but please, get ...",
+      "stance": 2,
+      "logic": "???",
+      "url": "https://www.theguardian.com/media/organgrinder/2007/sep/10/socialnetworkingisaboutrea",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 17870,
+      "title": "5 Benefits of Social Networks at Work - Workology",
+      "text": "5 Benefits of Social Networks at Work ... Hi Jessica, I agree with you that social media sites are used for relationship building, fostering organizational culture and trends and analysis. Apart from this, internally it builds a sense of community among employees. It encourages them to have their own branding within the company.",
+      "stance": 2,
+      "logic": "???",
+      "url": "https://workology.com/5-benefits-of-social-networks-at-work/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 32265,
+      "title": "Pocket Cell Phone Radiation Kills Sperm, Lowers ...",
+      "text": "Pocket Cell Phone Radiation Kills Sperm, Lowers Testosterone , Causes Infertility. ... Proving the effects of cell phone radiation are cumulative with more hours of use, those with the most usage had a 300% increase in having a brain tumor on the same side as a cell phone was most used. ... Smartphone Radiation Safety Helpline: +1 650-924-9328 ...",
+      "stance": -3,
+      "logic": "???",
+      "url": "https://www.rfsafe.com/pocket-cell-phone-radiation-kills-sperm-lowers-testosterone-causes-infertility/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 73623,
+      "title": "Is Cell Phone Radiation Dangerous? - Aires Technologies",
+      "text": "Is cell phone radiation dangerous? There is an invisible threat that looms over every person living in the modern world. We are unknowingly exposed to it every day because you cannot see it with the naked eye. You may be feeling the effects of it and not even know why or where they are coming from.",
+      "stance": -3,
+      "logic": "???",
+      "url": "https://www.airestech.com/lp/is-cell-phone-radiation-dangerous/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 77402,
+      "title": "Why mobile phones are NOT a health hazard | Technology ...",
+      "text": "Not all radiation is bad. Since the early 1990s, mobile phone usage worldwide has grown at an exponential rate. If phones are linked to cancer, we’d expect to see a marked uptick in cancer with ...",
+      "stance": 3,
+      "logic": "???",
+      "url": "https://www.theguardian.com/technology/2018/jul/21/mobile-phones-are-not-a-health-hazard",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 99908,
+      "title": "The Truth About Cell Phone Radiation - forbes.com",
+      "text": "Do mobile phones (cell phones) emit harmful radiation or electromagnetic fields? originally appeared on Quora: the place to gain and share knowledge, empowering people to learn from others and ...",
+      "stance": 2,
+      "logic": "???",
+      "url": "https://www.forbes.com/sites/quora/2018/02/02/the-truth-about-cell-phone-radiation/",
+      "credibility": 1,
+      "source": "SIGIR 21"
     }
   ],
   "regularSnippets": [
@@ -432,6 +564,306 @@
       "stance": 2,
       "url": "https://www.huffpost.com/entry/obesity-disease_b_861087",
       "credibility": 2,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 71444,
+      "title": "Zoos: Pitiful Prisons | PETA",
+      "text": "Zoo babies are crowd-pleasers, but breeding programs—under the guise of species preservation—inevitably result in a surplus of less “cute” adult animals. Zoos routinely trade, loan, sell, or barter adult animals they no longer want. A chimpanzee named Edith is one example of a discarded zoo baby who fell into the wrong hands.",
+      "stance": -3,
+      "url": "https://www.peta.org/issues/animals-in-entertainment/animals-used-entertainment-factsheets/zoos-pitiful-prisons/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 14881,
+      "title": "10 Reasons Why Zoos Are Bad and Should Be Banned • Pop ...",
+      "text": "One of the biggest reasons <b>why</b> <b>zoos</b> are bad is because there aren’t any proper laws to be followed when it comes to providing these animals with protection and as far as there isn’t any, <b>zoos</b> <b>should</b> be <b>banned</b>. 3. <b>Zoos</b> Do Not Offer Sufficient Space A tiger locked in its cage",
+      "stance": -3,
+      "url": "https://poplisticle.com/animals/10-reasons-why-zoos-are-bad-and-should-be-banned/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 15112,
+      "title": "OPINION: Zoos are an animal’s nightmare | The Collegian",
+      "text": "Baby animals are some of the most popular attractions at zoos; however, once those animals become adults, their popularity dwindles and the zoo begins to lose money. This incentive to breed new babies leads to overpopulation within the zoos, which forces the zoos to find a new home for the animals, according the Animal Rights article.",
+      "stance": -3,
+      "url": "https://www.kstatecollegian.com/2016/04/18/zoos-are-an-animals-nightmare/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 23508,
+      "title": "The Case for Closing Zoos | Outside Online",
+      "text": "The Case for Closing Zoos ... are there any good arguments for keeping animals in artificial ... Against the murky evidence that zoos educate or inspire is a growing amount of research showing ...",
+      "stance": -3,
+      "url": "https://www.outsideonline.com/1930141/case-closing-zoos",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 32191,
+      "title": "Friends, not felons: The case against zoos | The Vegan Society",
+      "text": "Arguments have been made that zoo animals such as elephants only travel long distances in the wild to look for food, and in zoos there is no need for them to travel this far. However, this hasn’t be conclusively proven – and, more importantly, humans still don’t have the right to take that freedom away.",
+      "stance": -3,
+      "url": "https://www.vegansociety.com/news/blog/friends-not-felons-case-against-zoos",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 12365,
+      "title": "How Do Zoos Help Endangered Animals? - Scientific American",
+      "text": "Zoos also use SSPs as research tools to better understand wildlife biology and population dynamics, and to raise awareness and funds to support field projects and habitat protection for specific ...",
+      "stance": 2,
+      "url": "https://www.scientificamerican.com/article/how-do-zoos-help-endangered-animals/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 80602,
+      "title": "The Case for Zoos: A Scientist’s Perspective | Zoological ...",
+      "text": "The Case for Zoos: A Scientist’s Perspective . ... How can zoos justify their ongoing existence in this modern age, when information and images of any species under the sun is just a click of the mouse away? Certainly this is a question that even I still ask myself occasionally, two years away from my 30 year anniversary as a veterinarian and ...",
+      "stance": 2,
+      "url": "https://www.zsl.org/blogs/wild-science/the-case-for-zoos-a-scientists-perspective",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 29925,
+      "title": "How zoos can save our animals | World Economic Forum",
+      "text": "Today, many zoos promote the protection of biodiversity as a significant part of their mission. As conservation “arks” for endangered species and, increasingly, as leaders in field conservation projects such as the reintroduction of captive-born animals to the wild, they’re preparing to play an even more significant role in the effort to save species in this century.",
+      "stance": 2,
+      "url": "https://www.weforum.org/agenda/2014/10/zoos-save-animal-species/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 38913,
+      "title": "Animals should be kept in zoos | Op-eds – Gulf News",
+      "text": "Animals should be kept in zoos. It was the parent’s responsibility to keep an eye on her child. Published: June 11, 2016 ... In conclusioon, zoos have a right to exist, for the sake of education ...",
+      "stance": 2,
+      "url": "https://gulfnews.com/opinion/op-eds/animals-should-be-kept-in-zoos-1.1844054",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "zoos",
+      "id": 41793,
+      "title": "Zoos Are Beneficial – The Wolfpacket",
+      "text": "Most people think of a zoo as a facility with indoor and outdoor settings where living, typically wild animals are kept for public exhibition. Some may say, like the definition implies, that a zoo’s only purpose is simply for humans to be entertained. On the contrary, zoos benefit animals more than people realize. There is...",
+      "stance": 2,
+      "url": "https://thewolfpacket.org/4064/opinions/zoos-are-beneficial/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 55237,
+      "title": "Facebook is ‘destroying’ society and ... - The Independent",
+      "text": "A former Facebook executive has spoken out against the site, saying it is “destroying how society works”. Chamath Palihapitiya, who was the company’s vice president of user growth from 2007 ...",
+      "stance": -3,
+      "url": "https://www.independent.co.uk/life-style/gadgets-and-tech/news/facebook-society-destroy-social-media-network-users-damage-communicate-connect-chamath-palihapitiya-a8105131.html",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 67183,
+      "title": "Negative Effects of Social Networking Sites for Students ...",
+      "text": "Daily overuse of these social networking sites tends to have a negative effect on the health of all students as it makes them more susceptible to various health problems in the future.",
+      "stance": -2,
+      "url": "https://www.business2community.com/social-media/negative-effects-of-social-networking-sites-for-students-0311887",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 86332,
+      "title": "5 Reasons Social Media Is Destroying Our Generation",
+      "text": "Social media has become an important and very common factor in our society. It helps us keep up with others, share our own lives, and waste time when we feel awkward standing alone. Social media has grown rapidly over the years with new apps and updates constantly coming out. Social media can be a good thing, but it can also be a very bad thing.",
+      "stance": -2,
+      "url": "https://www.theodysseyonline.com/5-reasons-social-media-destroying-our-generation",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 27086,
+      "title": "6 Scientific Reasons Social Networks Are Bad for Society ...",
+      "text": "6 Scientific Reasons Social Networks Are Bad for Society. Facebook. Twitter. ... Quantum communications will revolutionize streaming of our GILF threesomes! For users of social networking, the results were not encouraging. ... According to the study, a typical interaction on a social networking site is like a whirlwind of self-obsessed ...",
+      "stance": -2,
+      "url": "https://www.cracked.com/blog/6-scientific-reasons-social-networks-are-bad-society",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 27086,
+      "title": "Is social media ruining our kids? (Opinion) - CNN",
+      "text": "The more we promote social technology to our kids as a competition to be the best, the more we fuel disaster.",
+      "stance": -2,
+      "url": "https://www.cnn.com/2015/10/21/opinions/potarazu-kids-social-media/index.html",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 10216,
+      "title": "Social networking is about real friends | Media | The Guardian",
+      "text": "The lazy arguments against social networking sites are really very boring now: &quot;I&#39;d rather meet Face-to-Facebook&quot; might have been faintly entertaining the first time you said it but please, get ...",
+      "stance": 2,
+      "url": "https://www.theguardian.com/media/organgrinder/2007/sep/10/socialnetworkingisaboutrea",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 17870,
+      "title": "5 Benefits of Social Networks at Work - Workology",
+      "text": "5 Benefits of Social Networks at Work ... Hi Jessica, I agree with you that social media sites are used for relationship building, fostering organizational culture and trends and analysis. Apart from this, internally it builds a sense of community among employees. It encourages them to have their own branding within the company.",
+      "stance": 2,
+      "url": "https://workology.com/5-benefits-of-social-networks-at-work/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 48963,
+      "title": "6 Reasons Why Social Networking is So Popular These Days ...",
+      "text": "The popularity of social networking sites has rapidly increased over the past few years. Social networks provide many kinds of services and benefits to its users like helping them to connect with new people, share opinions with likeminded people, and stay in touch with old friends and colleagues.",
+      "stance": 2,
+      "url": "https://www.brandignity.com/2012/11/6-reasons-why-social-networking-is-so-popular-these-days/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 80559,
+      "title": "7 Reasons Why Social Networking Is Good For Our Society ...",
+      "text": "7 Reasons Why Social Networking Is Good For Our Society. With the advancement of the Internet, the phenomenon of using social networks in everyday lives has somewhat become not just common but also omnipresent. While some use them for fun, killing time and playing games, there are still those who have realized the true potential and power of ...",
+      "stance": 2,
+      "url": "https://technofaq.org/posts/2015/04/7-reasons-why-social-networking-is-good-for-our-society/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "networkingSites",
+      "id": 96640,
+      "title": "Viewpoint: The case against social media regulation ...",
+      "text": "Notwithstanding these points, there are a number of arguments that suggest regulation and control are inappropriate, and ultimately unnecessary: Social Media for the good argument: The Arab Spring took root through social media, and was so effective at organizing the grassroots that the despotic governments shut it down. Providing a back door ...",
+      "stance": 2,
+      "url": "https://www.randallcraig.com/case-against-social-media-regulation/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 32265,
+      "title": "Pocket Cell Phone Radiation Kills Sperm, Lowers ...",
+      "text": "Pocket Cell Phone Radiation Kills Sperm, Lowers Testosterone , Causes Infertility. ... Proving the effects of cell phone radiation are cumulative with more hours of use, those with the most usage had a 300% increase in having a brain tumor on the same side as a cell phone was most used. ... Smartphone Radiation Safety Helpline: +1 650-924-9328 ...",
+      "stance": -3,
+      "url": "https://www.rfsafe.com/pocket-cell-phone-radiation-kills-sperm-lowers-testosterone-causes-infertility/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 73623,
+      "title": "Is Cell Phone Radiation Dangerous? - Aires Technologies",
+      "text": "Is cell phone radiation dangerous? There is an invisible threat that looms over every person living in the modern world. We are unknowingly exposed to it every day because you cannot see it with the naked eye. You may be feeling the effects of it and not even know why or where they are coming from.",
+      "stance": -3,
+      "url": "https://www.airestech.com/lp/is-cell-phone-radiation-dangerous/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 93042,
+      "title": "10 Reasons Cell Phones Might Not Be Safe",
+      "text": "The same radiation that comes out of cell phones also comes from microwave ovens and radios with AM/FM dials. There is no doubt that high doses of this radiation causes cancer, but since this is a lower dose, scientists are not yet sure how much it will take to cause the same effect, and less is known about what the risks of this low dose radiation might be.",
+      "stance": -3,
+      "url": "https://www.listland.com/10-reasons-cell-phones-might-not-safe/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 38729,
+      "title": "We Have No Reason to Believe 5G Is Safe - Scientific ...",
+      "text": "The telecommunications industry and their experts have accused many scientists who have researched the effects of cell phone radiation of &quot;fear mongering&quot; over the advent of wireless technology&#39;s 5G.",
+      "stance": -3,
+      "url": "https://blogs.scientificamerican.com/observations/we-have-no-reason-to-believe-5g-is-safe/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 38405,
+      "title": "Study on Cell Phone, EMF Dangers Ignored – American Free Press",
+      "text": "Home National News Study on Cell Phone, EMF Dangers Ignored ... and puts to rest the traditional scientific argument that cell phone radiation can’t do harm.” ... Tightening up cell phone safety standards will be strongly opposed by the industry that simply wants to merchandise more wireless products, regardless of the risk to the public. ...",
+      "stance": -2,
+      "url": "https://americanfreepress.net/study-on-cell-phone-emf-dangers-ignored/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 77402,
+      "title": "Why mobile phones are NOT a health hazard | Technology ...",
+      "text": "Not all radiation is bad. Since the early 1990s, mobile phone usage worldwide has grown at an exponential rate. If phones are linked to cancer, we’d expect to see a marked uptick in cancer with ...",
+      "stance": 3,
+      "url": "https://www.theguardian.com/technology/2018/jul/21/mobile-phones-are-not-a-health-hazard",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 83797,
+      "title": "How Dangerous Is Cell Phone Radiation? - Skeptoid",
+      "text": "The lack of any connection is not surprising, given that no plausible hypothesis exists for how a cell phone could cause tissue damage. RF below the visible spectrum, which includes the frequencies used by cell phones and all radio devices, is not ionizing radiation and so has no potential to damage living cells or break any chemical bonds.",
+      "stance": 2,
+      "url": "https://skeptoid.com/episodes/4117",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 70889,
+      "title": "5G dangers: mmWave microwaves and other health claims debunked",
+      "text": "Many of the persistent myths about cell tower radiation still hang over the industry from as far back as the 2G days. ... Carpenter continued to pursue this argument against various other network ...",
+      "stance": 2,
+      "url": "https://www.androidauthority.com/5g-dangers-895776/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 31633,
+      "title": "About that Cell Phone and Cancer Study – Science-Based ...",
+      "text": "This trend continues to the present day. We therefore have about 25 years of data showing that a dramatic increase in cell phone use over that time has not resulted in an increase in brain tumors overall. This is a powerful argument against any causal connection between cell phone use and brain tumors.",
+      "stance": 2,
+      "url": "https://sciencebasedmedicine.org/about-that-cell-phone-and-cancer-study/",
+      "credibility": 1,
+      "source": "SIGIR 21"
+    },
+    {
+      "topic": "cellphoneRadiation",
+      "id": 99908,
+      "title": "The Truth About Cell Phone Radiation - forbes.com",
+      "text": "Do mobile phones (cell phones) emit harmful radiation or electromagnetic fields? originally appeared on Quora: the place to gain and share knowledge, empowering people to learn from others and ...",
+      "stance": 2,
+      "url": "https://www.forbes.com/sites/quora/2018/02/02/the-truth-about-cell-phone-radiation/",
+      "credibility": 1,
       "source": "SIGIR 21"
     }
   ]

@@ -91,26 +91,18 @@ const PreStudy = () => {
         router.push("/thank-you");
         return;
       }
-
-      // Add random mildStance to the cookie
-      const randomMildStance =
-        mildStances[Math.floor(Math.random() * mildStances.length)];
-      console.log(typeof mildStances);
-
+     
       let workStances = mildStances;
-      if (workStances.length >= 3) {
-        workStances.sort(() => Math.random() - 0.5)
 
-        Cookies.set("topicOne", workStances[0]["topic"]);
-        Cookies.set("topicTwo", workStances[1]["topic"]);
-        Cookies.set("topicThree", workStances[2]["topic"]);
-      } else {
-        router.push("/thank-you");
-        return;
-      }
-      
-      Cookies.set("mildTopics", mildStances);
-      Cookies.set("topic", randomMildStance.topic);
+      workStances.sort(() => Math.random() - 0.5)
+
+      let mildTopics = []
+      workStances.forEach((obj) => mildTopics.push(obj.topic))
+
+      Cookies.set("topics", JSON.stringify(mildTopics));
+      Cookies.set("helpPreTask", true)
+      console.log(Cookies.get("topics"))
+    
 
       router.push("/pre-task");
     } catch (e) {

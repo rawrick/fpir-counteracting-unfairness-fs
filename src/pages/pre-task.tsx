@@ -10,16 +10,24 @@ import { createPreTaskQuestion } from "../api";
 import { Button, Head, PageContainer } from "../components";
 
 const PreTask: NextPage = () => {
+
+  const help = Cookies.get("helpPreTask")
+  console.log(help)
+  if (help) {
+   return undefined
+  }
+
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [explanation, setExplanation] = useState<string>("");
   const [snippetId, setSnippetId] = useState<number>();
   const userId = Cookies.get("userId");
-  const topic = Cookies.get("topic");
-  const mildTopic = Cookies.get("mildTopics")
   const stance = Cookies.get("stance");
   const router = useRouter();
 
-  console.log(typeof mildTopic);
+  const topics = JSON.parse(Cookies.get("topics"))
+  console.log(topics)
+  const topic = topics.shift()
+
 
   preventBackButton();
 
@@ -71,6 +79,11 @@ const PreTask: NextPage = () => {
     ))[randomIndex];
 
     Cookies.set("snippetId", featuredSnippet?.id);
+
+    // Set Cookies
+    Cookies.set("topics", JSON.stringify(topics))
+    Cookies.set("topic", topic)
+    Cookies.set("helpPreTask", false)
 
     // Replace new lines of explanation with actual <br> tags
     const explanationWithBreaks = explanation.replace(/\n/g, "<br>");

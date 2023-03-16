@@ -36,6 +36,8 @@ const PostTask: NextPage = () => {
   const router = useRouter();
   const question = questions.filter((q) => q.topic === topic)[0];
 
+  Cookies.set("helpPreTask", true)
+
   const { data: queries, error: queryError } = useSWR(
     () => `/api/queries`,
     fetcher,

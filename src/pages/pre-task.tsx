@@ -27,8 +27,7 @@ const PreTask: NextPage = () => {
 
   const topicsString = Cookies.get("topics")
   console.log(topicsString)
-  console.log(JSON.parse(topicsString))
-  const topics = JSON.parse(topicsString)
+  const topics = ["obesity"]
   //console.log(topics)
   //console.log(topics[0])
   const topic = topics.shift()

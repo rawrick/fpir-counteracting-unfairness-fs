@@ -26,7 +26,7 @@ const PreTask: NextPage = () => {
   const router = useRouter();
 
   const topicsString = Cookies.get("topics")
-  console.log(topicsString)
+  console.log(typeof topicsString)
   const topics = ["obesity"]
   //console.log(topics)
   //console.log(topics[0])

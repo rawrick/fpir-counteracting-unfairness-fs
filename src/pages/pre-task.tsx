@@ -27,6 +27,10 @@ const PreTask: NextPage = () => {
 
   const topicsString = Cookies.get("topics")
 
+  if (topicsString === undefined) {
+    return undefined
+  }
+
   const topics = topicsString.substring(1, topicsString.length - 1).replaceAll('"', "").split(",")
   //console.log(topics)
   //console.log(topics[0])

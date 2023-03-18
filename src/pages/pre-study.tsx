@@ -100,7 +100,7 @@ const PreStudy = () => {
       workStances.forEach((obj) => mildTopics.push(obj.topic))
 
       Cookies.set("topics", JSON.stringify(mildTopics));
-      Cookies.set("helpPreTask", true)
+      Cookies.set("helpPreTask", "true")
       console.log(Cookies.get("topics"))
     
 

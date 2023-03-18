@@ -41,8 +41,8 @@ const SERP = () => {
   const stance = Cookies.get("stance");
   const snippetId = Cookies.get("snippetId");
 
-  const topics = JSON.parse(Cookies.get("topics"))
-  console.log(topics)
+  //const topics = JSON.parse(Cookies.get("topics"))
+  //console.log(topics)
 
   preventBackButton();
 

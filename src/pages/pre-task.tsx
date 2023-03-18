@@ -31,7 +31,8 @@ const PreTask: NextPage = () => {
     return undefined
   }
 
-  const topics = topicsString.substring(1, topicsString.length - 1).replaceAll('"', "").split(",")
+  // const topics = topicsString.substring(1, topicsString.length - 1).replaceAll('"', "").split(",")
+  const topics = JSON.parse(topicsString)
   //console.log(topics)
   //console.log(topics[0])
   const topic = topics.shift()

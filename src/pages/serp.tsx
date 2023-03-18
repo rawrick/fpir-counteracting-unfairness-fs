@@ -41,9 +41,6 @@ const SERP = () => {
   const stance = Cookies.get("stance");
   const snippetId = Cookies.get("snippetId");
 
-  //const topics = JSON.parse(Cookies.get("topics"))
-  //console.log(topics)
-
   preventBackButton();
 
   const submitRating = async (e) => {
@@ -146,14 +143,18 @@ const SERP = () => {
   if (!snippets) return <div>Loading...</div>;
   if (snippetError) return <div>Error: {snippetError.message}</div>;
 
+  const condition = Cookies.get("condition")
+  // TODO: Ordner, die genau wie die conditions heißen mit Bildern drin
+  // TODO: random Bild aus Ordner condition aussuchen
+  // TODO: Bild muss angezeigt werden
+
   return (
     <>
       <Head />
       <SearchHeader query={query} />
       <form
-        className={`ml-[170px] max-w-[652px] py-8 space-y-14 ${
-          isScrolled && "mt-20"
-        }`}
+        className={`ml-[170px] max-w-[652px] py-8 space-y-14 ${isScrolled && "mt-20"
+          }`}
         onSubmit={submitRating}>
         <FeaturedSnippet
           onClick={() =>

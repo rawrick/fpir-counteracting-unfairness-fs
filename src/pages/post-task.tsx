@@ -76,9 +76,8 @@ const PostTask: NextPage = () => {
       ]);
 
       let topicCount = JSON.parse(Cookies.get("topics")).length
-      console.log(topicCount)
       if (topicCount > 0) {
-        Cookies.set("preTaskHelp", false)
+        Cookies.set("preTaskHelp", "false")
         router.push("/pre-task")
       } else {
         router.push("/post-study");

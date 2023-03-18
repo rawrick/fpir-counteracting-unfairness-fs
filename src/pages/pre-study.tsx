@@ -101,7 +101,6 @@ const PreStudy = () => {
 
       Cookies.set("topics", JSON.stringify(mildTopics));
       Cookies.set("helpPreTask", "true")
-      console.log(Cookies.get("topics"))
     
 
       router.push("/pre-task");

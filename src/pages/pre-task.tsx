@@ -12,9 +12,7 @@ import { Button, Head, PageContainer } from "../components";
 const PreTask: NextPage = () => {
 
   const help = Cookies.get("helpPreTask")
-  console.log(help)
   if (help === "NEIN") {
-    console.log("!HELP: ", Cookies.get("topics"))
     return undefined
   }
 
@@ -31,13 +29,8 @@ const PreTask: NextPage = () => {
     return undefined
   }
 
-  // const topics = topicsString.substring(1, topicsString.length - 1).replaceAll('"', "").split(",")
   const topics = JSON.parse(topicsString)
-  //console.log(topics)
-  //console.log(topics[0])
   const topic = topics.shift()
-  console.log(topic)
-  //const topic = topics[0]
 
   preventBackButton();
 

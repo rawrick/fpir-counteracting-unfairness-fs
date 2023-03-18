@@ -26,8 +26,8 @@ const PreTask: NextPage = () => {
   const router = useRouter();
 
   const topicsString = Cookies.get("topics")
-  console.log(typeof topicsString)
-  const topics = ["obesity"]
+
+  const topics = topicsString.substring(1, topicsString.length - 1).replaceAll('"', "").split(",")
   //console.log(topics)
   //console.log(topics[0])
   const topic = topics.shift()

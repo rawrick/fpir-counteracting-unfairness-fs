@@ -9,7 +9,8 @@
     "migrate:dev": "prisma migrate dev --preview-feature",
     "migrate:deploy": "prisma migrate deploy --preview-feature",
     "migrate:status": "prisma migrate status --preview-feature",
-    "generate": "prisma generate"
+    "generate": "prisma generate",
+    "lint": "next lint"
   },
   "dependencies": {
     "@prisma/client": "^3.15.1",
@@ -28,6 +29,8 @@
     "@types/node": "^17.0.43",
     "@types/react": "^18.0.12",
     "autoprefixer": "^10.4.7",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
     "postcss": "^8.4.14",
     "prisma": "^3.15.1",
     "tailwindcss": "^3.1.4",

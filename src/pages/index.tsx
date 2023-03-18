@@ -18,6 +18,15 @@ const Home: NextPage = () => {
   const [prolificId, setProlificId] = useState<string>("");
   const router = useRouter();
 
+
+  //TODO: aus Datenbank auslesen welches der 3 Themen
+  const conditions = ["noBar", "equalBar", "biasedBar"]
+  let condition = Cookies.get("condition")
+  if (!conditions.includes(condition)) {
+    let randomCondition = conditions[Math.floor(Math.random() * conditions.length)]
+    Cookies.set("condition", randomCondition)
+  }
+
   useEffect(() => {
     if (acceptedConsent && !isSubmitting) {
       setIsDisabled(false);

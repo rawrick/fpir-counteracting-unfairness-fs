@@ -13,8 +13,9 @@ const PreTask: NextPage = () => {
 
   const help = Cookies.get("helpPreTask")
   console.log(help)
-  if (help) {
-   return undefined
+  if (help === "NEIN") {
+    console.log("!HELP: ", Cookies.get("topics"))
+    return undefined
   }
 
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -25,9 +26,11 @@ const PreTask: NextPage = () => {
   const router = useRouter();
 
   const topics = JSON.parse(Cookies.get("topics"))
-  console.log(topics)
+  //console.log(topics)
+  //console.log(topics[0])
   const topic = topics.shift()
-
+  console.log(topic)
+  //const topic = topics[0]
 
   preventBackButton();
 
@@ -81,9 +84,10 @@ const PreTask: NextPage = () => {
     Cookies.set("snippetId", featuredSnippet?.id);
 
     // Set Cookies
+    Cookies.set("helpPreTask", "NEIN")
     Cookies.set("topics", JSON.stringify(topics))
     Cookies.set("topic", topic)
-    Cookies.set("helpPreTask", false)
+    
 
     // Replace new lines of explanation with actual <br> tags
     const explanationWithBreaks = explanation.replace(/\n/g, "<br>");

@@ -74,7 +74,15 @@ const PostTask: NextPage = () => {
         createPostTaskQuestion(data),
         new Promise((resolve) => setTimeout(resolve, 800)),
       ]);
-      router.push("/post-study");
+
+      let topicCount = JSON.parse(Cookies.get("topics")).length
+      console.log(topicCount)
+      if (topicCount > 0) {
+        Cookies.set("preTaskHelp", false)
+        router.push("/pre-task")
+      } else {
+        router.push("/post-study");
+      }
     } catch (e) {
       setIsSubmitting(false);
     }

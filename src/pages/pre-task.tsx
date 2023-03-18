@@ -25,7 +25,8 @@ const PreTask: NextPage = () => {
   const stance = Cookies.get("stance");
   const router = useRouter();
 
-  const topics = JSON.parse(Cookies.get("topics"))
+  //const topics = JSON.parse(Cookies.get("topics"))
+  const topics = ["obesity"]
   //console.log(topics)
   //console.log(topics[0])
   const topic = topics.shift()

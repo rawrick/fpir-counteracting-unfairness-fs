@@ -23,17 +23,17 @@ const questions = [
     value: null,
   },
   {
-    topic: "cellPhoneRadiation",
+    topic: "cellphoneRadiation",
     question: "Is cell phone radiation safe?",
     value: null,
   },
   {
-    topic: "zoosExist",
+    topic: "zoos",
     question: "Should Zoos exist?",
     value: null,
   },
   {
-    topic: "networkingSociety",
+    topic: "networkingSites",
     question: "Are social networking sites good for our society?",
     value: null,
   },
@@ -77,6 +77,7 @@ const PreStudy = () => {
         userId,
         topic: q.topic,
         stance: clamp(q.value),
+        condition: "noBar",
       };
     });
 

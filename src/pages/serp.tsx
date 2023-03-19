@@ -212,6 +212,7 @@ const SERP = () => {
         display: false
       },
       y: {
+        type: 'category',
         stacked: true,
         display: false
       }

@@ -20,6 +20,27 @@ import {
 } from "../components";
 import { useScroll } from "../hooks/useScroll";
 import { IFeaturedSnippet, IRegularSnippet } from "../types";
+import { Bar } from 'react-chartjs-2';
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
 
 const SERP = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -40,6 +61,7 @@ const SERP = () => {
   const topic = Cookies.get("topic");
   const stance = Cookies.get("stance");
   const snippetId = Cookies.get("snippetId");
+  const condition = Cookies.get("condition")
 
   preventBackButton();
 
@@ -143,10 +165,65 @@ const SERP = () => {
   if (!snippets) return <div>Loading...</div>;
   if (snippetError) return <div>Error: {snippetError.message}</div>;
 
-  const condition = Cookies.get("condition")
-  // TODO: Ordner, die genau wie die conditions heißen mit Bildern drin
-  // TODO: random Bild aus Ordner condition aussuchen
-  // TODO: Bild muss angezeigt werden
+  // Bar
+
+  const biasedLower = 5;
+  const biasedUpper = 30;
+  const equalLower = 45;
+  const equalUpper = 55;
+
+  let proValue = 0;
+
+  switch (condition) {
+    case "equalBar":
+      proValue = Math.floor(Math.random() * (equalUpper - equalLower) + equalLower);
+      console.log('EQUAL PRO VALUE: ', proValue)
+      break;
+    case "biasedBar":
+      proValue = Math.floor(Math.random() * (biasedUpper - biasedLower) + biasedLower);
+      console.log('BIASED PRO VALUE: ', proValue)
+      break;
+    default:
+      break;
+  }
+
+  const chartData = {
+    labels: [''],
+    datasets: [
+      {
+        label: 'Pro',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        data: [proValue]
+      },
+      {
+        label: 'Contra',
+        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        data: [100 - proValue]
+      }
+    ]
+  };
+
+  const options = {
+    responsive: true,
+    indexAxis: 'y',
+    scales: {
+      x: {
+        stacked: true,
+        display: false
+      },
+      y: {
+        stacked: true,
+        display: false
+      }
+    },
+    barThickness: 50, 
+    events: []
+  };
+
+  let hide = false
+  if (condition === 'noBar') {
+    hide = true
+  }
 
   return (
     <>
@@ -156,6 +233,9 @@ const SERP = () => {
         className={`ml-[170px] max-w-[652px] py-8 space-y-14 ${isScrolled && "mt-20"
           }`}
         onSubmit={submitRating}>
+        <div hidden={hide}>
+          <Bar options={options} data={chartData} className={`max-h-[100px]`} />
+        </div>
         <FeaturedSnippet
           onClick={() =>
             handleClick(featuredSnippet.id, 1, featuredSnippet.url)

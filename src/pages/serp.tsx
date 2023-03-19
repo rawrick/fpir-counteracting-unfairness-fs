@@ -179,6 +179,9 @@ const SERP = () => {
         break;
       case "biasedBar":
         proValue = Math.floor(Math.random() * (biasedUpper - biasedLower) + biasedLower);
+        if (stance === "neg") {
+          proValue = 100 - proValue
+        }
         Cookies.set("proValue", "" + proValue)
         break;
       default:
@@ -186,16 +189,25 @@ const SERP = () => {
     }
   }
 
+  const queriesProCon = {
+    "schoolUniforms" : ["Students should wear school uniforms", "Students should not wear school uniforms"],
+    "propertyRights" : ["Intellectual property rights should exist", "Intellectual property rights should not exist"],
+    "obesity" : ["Obesity is a disease", "Obesity is not a disease"],
+    "cellphoneRadiation" : ["Cell phone radiation is safe", "Cell phone radiation is not safe"],
+    "zoos" : ["Zoos should exist", "Zoos should not exist"],
+    "networkingSites" : ["Social networking sites are good for our society", "Social networking sites are bad for our society"]
+  }
+
   const chartData = {
     labels: [''],
     datasets: [
       {
-        label: 'Pro',
+        label: queriesProCon[topic][0],
         backgroundColor: colorPro,
         data: [proValue]
       },
       {
-        label: 'Contra',
+        label: queriesProCon[topic][1],
         backgroundColor: colorCon,
         data: [100 - proValue]
       }

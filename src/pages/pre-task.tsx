@@ -16,6 +16,8 @@ const PreTask: NextPage = () => {
     return undefined
   }
 
+  Cookies.set("proValue", "" + -1)
+
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [explanation, setExplanation] = useState<string>("");
   const [snippetId, setSnippetId] = useState<number>();

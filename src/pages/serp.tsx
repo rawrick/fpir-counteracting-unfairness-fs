@@ -172,19 +172,23 @@ const SERP = () => {
   const equalLower = 45;
   const equalUpper = 55;
 
-  let proValue = 0;
+  let proValue = Cookies.get("proValue") + 0;
 
-  switch (condition) {
-    case "equalBar":
-      proValue = Math.floor(Math.random() * (equalUpper - equalLower) + equalLower);
-      console.log('EQUAL PRO VALUE: ', proValue)
-      break;
-    case "biasedBar":
-      proValue = Math.floor(Math.random() * (biasedUpper - biasedLower) + biasedLower);
-      console.log('BIASED PRO VALUE: ', proValue)
-      break;
-    default:
-      break;
+  if (proValue === -1) {
+    switch (condition) {
+      case "equalBar":
+        proValue = Math.floor(Math.random() * (equalUpper - equalLower) + equalLower);
+        console.log('EQUAL PRO VALUE: ', proValue)
+        Cookies.set("proValue", "" + proValue)
+        break;
+      case "biasedBar":
+        proValue = Math.floor(Math.random() * (biasedUpper - biasedLower) + biasedLower);
+        console.log('BIASED PRO VALUE: ', proValue)
+        Cookies.set("proValue", "" + proValue)
+        break;
+      default:
+        break;
+    }
   }
 
   const chartData = {
@@ -216,7 +220,7 @@ const SERP = () => {
         display: false
       }
     },
-    barThickness: 50, 
+    barThickness: 50,
     events: []
   };
 

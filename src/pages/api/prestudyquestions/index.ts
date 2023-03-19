@@ -5,6 +5,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, body } = req;
 
   switch (method) {
+
+    case "GET":
+    const preStudyQuestions = await prisma.preStudyQuestion.findMany();
+    res.status(200).json(preStudyQuestions);
+    break;
+
+
     case "POST":
       await prisma.preStudyQuestion.createMany({
         data: body,

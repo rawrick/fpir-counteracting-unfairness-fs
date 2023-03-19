@@ -49,6 +49,7 @@ const PreStudy = () => {
   const [question, setQuestion] = useState<LikertQuestion[]>(questions);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const userId = Cookies.get("userId");
+  const userCondition = Cookies.get("lowestCondition");
 
   preventBackButton();
 
@@ -77,7 +78,7 @@ const PreStudy = () => {
         userId,
         topic: q.topic,
         stance: clamp(q.value),
-        condition: "noBar",
+        condition: userCondition,
       };
     });
 
@@ -85,7 +86,7 @@ const PreStudy = () => {
     const mildStances = data.filter((q) => q.stance >= -1 && q.stance <= 1);
 
     try {
-      await createPreStudyQuestions(data);
+      await createPreStudyQuestions(mildStances);
 
       // If there are no mild stances, redirect to the next page
       if (mildStances.length === 0) {

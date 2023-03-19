@@ -11,6 +11,7 @@ model User {
   id               String            @id @default(auto()) @map("_id") @db.ObjectId
   prolificId       String            @unique @map("prolific_id")
   stance           String
+  condition        String?
   logic            String?           @map("logic")
   preTaskQuestion  PreTaskQuestion?
   demographic      Demographic?
@@ -20,12 +21,15 @@ model User {
   createdAt        DateTime          @default(now()) @map("created_at")
 }
 
+
+
 model PreStudyQuestion {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   user      User     @relation(fields: [userId], references: [id])
   userId    String   @unique @map("user_id") @db.ObjectId
   topic     String
   stance    Int
+  condition String?
   createdAt DateTime @default(now()) @map("created_at")
 }
 

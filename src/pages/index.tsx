@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { createUser } from "../api";
+import { createUser, updateUserCondition } from "../api";
 import { Input } from "../components";
 import { Button } from "../components/Button";
 import { Head } from "../components/Head";
@@ -44,6 +44,19 @@ const Home: NextPage = () => {
       Cookies.set("stance", stance);
       const user = await createUser(prolificId, stance);
       Cookies.set("userId", user.id);
+      const usersCondition = Cookies.get("lowestCondition");
+      Cookies.set("condition", usersCondition);
+
+      try {
+        await updateUserCondition(user.id, usersCondition);
+  
+        const [res] = await Promise.allSettled([
+          new Promise((resolve) => setTimeout(resolve, 800)),
+        ]);
+        //router.push("/post-task");
+      } catch (e) {
+        console.log(e);
+      }
 
       // Redirect to the next page
       router.push("/pre-study");

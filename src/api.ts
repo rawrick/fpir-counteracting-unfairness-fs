@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import {
   PostTaskQuestion,
   PreStudyQuestion,
@@ -16,16 +17,72 @@ const routes = {
   demographics: "/api/demographics",
 };
 
+const possibleConditions = ['noBar', 'equalBar', 'biasedBar'];
+
 /**
  * Creates a new user in the database.
  * @param prolificId The prolific id of the user.
  * @returns The user that was created.
  */
+
+/** VERSION 2.0 */
 export const createUser = async (
   prolificId: string,
   stance: string
 ): Promise<User> => {
-  const res = await axios.post(routes.users, { prolificId, stance });
+  //Fetch preStudyQuestions
+  const preStudyQuestions = await axios.get(routes.preStudyQuestions);
+
+
+
+
+  console.log(preStudyQuestions);
+
+  
+  //Count
+  const conditionCounts = possibleConditions.reduce(
+    (counts, condition) => ({
+      ...counts,
+      [condition]: preStudyQuestions.data.filter(
+        (question) => question.condition === condition
+      ).length,
+    }),
+    {}
+  );
+
+  /**
+  const conditionCounts = possibleConditions.reduce(
+    (counts, condition) => ({
+      ...counts,
+      [condition]: new Set(
+        preStudyQuestions.data
+          .filter((question) => question.condition === condition)
+          .map((question) => question.userId)
+      ).size,
+    }),
+    {}
+  ); */
+  
+  console.log(conditionCounts);
+
+  //Get Lowest Condition
+  const lowestCountCondition = possibleConditions.reduce(
+    (lowestCondition, condition) =>
+      conditionCounts[condition] < conditionCounts[lowestCondition]
+        ? condition
+        : lowestCondition,
+    possibleConditions[0]
+  );
+
+  Cookies.set("lowestCondition", lowestCountCondition);
+
+  console.log(lowestCountCondition);
+
+  //Actually create User
+  const res = await axios.post(routes.users, {
+    prolificId,
+    stance,
+  });
 
   if (res?.status === 201) {
     return res.data;
@@ -33,6 +90,39 @@ export const createUser = async (
     throw new Error("Failed to create user");
   }
 };
+
+
+
+/** VERSION 1.0
+export const createUser = async (
+  prolificId: string,
+  stance: string
+): Promise<User> => {
+  const res = await axios.post(routes.users, { prolificId, stance});
+
+  if (res?.status === 201) {
+    return res.data;
+  } else {
+    throw new Error("Failed to create user");
+  }
+};
+*/
+
+/** VERSION 3.0
+export const createUser = async (
+  prolificId: string,
+  stance: string,
+  condition: string
+): Promise<User> => {
+  const res = await axios.post(routes.users, { prolificId, stance, condition });
+
+  if (res?.status === 201) {
+    return res.data;
+  } else {
+    throw new Error("Failed to create user");
+  }
+};
+*/
 
 /**
  * Creates a new entry for the responses to the pre-study questions.
@@ -129,5 +219,21 @@ export const updateUserLogic = async (userId: string, logic: string) => {
     return res.data;
   } else {
     throw new Error("Failed to update user logic");
+  }
+};
+
+/**
+ *
+ * @param userId The id of the user.
+ * @param condition The condition that the user got presented in the Featured Snippet.
+ * @returns The user that was updated.
+ */
+export const updateUserCondition = async (userId: string, logic: string) => {
+  const res = await axios.post(`${routes.users}/${userId}`, { logic });
+
+  if (res?.status === 200) {
+    return res.data;
+  } else {
+    throw new Error("Failed to update user condition");
   }
 };

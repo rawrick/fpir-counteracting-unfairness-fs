@@ -172,18 +172,16 @@ const SERP = () => {
   const equalLower = 45;
   const equalUpper = 55;
 
-  let proValue = Cookies.get("proValue") + 0;
+  let proValue = +Cookies.get("proValue");
 
   if (proValue === -1) {
     switch (condition) {
       case "equalBar":
         proValue = Math.floor(Math.random() * (equalUpper - equalLower) + equalLower);
-        console.log('EQUAL PRO VALUE: ', proValue)
         Cookies.set("proValue", "" + proValue)
         break;
       case "biasedBar":
         proValue = Math.floor(Math.random() * (biasedUpper - biasedLower) + biasedLower);
-        console.log('BIASED PRO VALUE: ', proValue)
         Cookies.set("proValue", "" + proValue)
         break;
       default:

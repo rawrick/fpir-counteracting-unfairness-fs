@@ -205,14 +205,13 @@ const SERP = () => {
 
   const options = {
     responsive: true,
-    indexAxis: 'y',
+    indexAxis: 'y' as const,
     scales: {
       x: {
         stacked: true,
         display: false
       },
       y: {
-        type: 'category',
         stacked: true,
         display: false
       }

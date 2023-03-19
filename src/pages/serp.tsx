@@ -70,16 +70,10 @@ const SERP = () => {
     setIsSubmitting(true);
 
     try {
-      await updateUserLogic(userId, featuredSnippet.logic);
-
-      const [res] = await Promise.allSettled([
-        new Promise((resolve) => setTimeout(resolve, 800)),
-      ]);
       router.push("/post-task");
     } catch (e) {
       console.log(e);
     }
-
     setIsSubmitting(false);
   };
 
@@ -172,6 +166,9 @@ const SERP = () => {
   const equalLower = 45;
   const equalUpper = 55;
 
+  const colorPro = '#0097AC';
+  const colorCon = '#ffa500';
+
   let proValue = +Cookies.get("proValue");
 
   if (proValue === -1) {
@@ -194,12 +191,12 @@ const SERP = () => {
     datasets: [
       {
         label: 'Pro',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        backgroundColor: colorPro,
         data: [proValue]
       },
       {
         label: 'Contra',
-        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        backgroundColor: colorCon,
         data: [100 - proValue]
       }
     ]

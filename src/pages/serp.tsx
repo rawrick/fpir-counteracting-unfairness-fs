@@ -78,14 +78,16 @@ const SERP = () => {
   };
 
   const handleClick = async (docId: number, position: number, url: string) => {
+    console.log(docId, position, url)
     // Store clicked url and its position in the DOM
     const data = {
       docId,
       userId,
       topic,
       position,
-      url,
     };
+
+    console.log(data);
 
     // Send data to backend
     await createPageVisit(data);

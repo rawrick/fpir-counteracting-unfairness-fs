@@ -14,6 +14,7 @@ const routes = {
   preTaskQuestions: "/api/pretaskquestions",
   postTaskQuestions: "/api/posttaskquestions",
   pageVisits: "/api/pagevisits",
+  clicks: "/api/clicks",
   demographics: "/api/demographics",
 };
 
@@ -183,7 +184,10 @@ export const createPostTaskQuestion = async (
  * @returns The page visit that was created.
  */
 export const createPageVisit = async (pageVisit): Promise<void> => {
-  const res = await axios.post(routes.pageVisits, pageVisit);
+  var config = {
+    headers: {'Access-Control-Allow-Origin': '*'}
+  };
+  const res = await axios.post(routes.clicks, pageVisit, config);
 
   if (res?.status === 201) {
     return res.data;

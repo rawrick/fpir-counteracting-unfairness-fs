@@ -4,7 +4,6 @@ export interface IRegularSnippet {
   title: string;
   text: string;
   stance: number;
-  logic: string;
   url: string;
   credibility: number;
   source: string;

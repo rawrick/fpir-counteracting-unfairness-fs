@@ -5,6 +5,7 @@ import { clamp } from "../../lib/clamp";
 import { preventBackButton } from "../../lib/prevent-back-button";
 import { createPreStudyQuestions } from "../api";
 import { Button, Head, LikertScale, PageContainer } from "../components";
+import { getRandomInt } from "../../lib/rand-int";
 
 const questions = [
   {
@@ -38,6 +39,8 @@ const questions = [
     value: null,
   },
 ];
+
+const possibleStance = ["pos", "neg"];
 
 interface LikertQuestion {
   topic: string;
@@ -77,6 +80,7 @@ const PreStudy = () => {
       return {
         userId,
         topic: q.topic,
+        fsStance: possibleStance[getRandomInt(0, 1)],
         stance: clamp(q.value),
         condition: userCondition,
       };
@@ -99,9 +103,14 @@ const PreStudy = () => {
       workStances.sort(() => Math.random() - 0.5)
 
       let mildTopics = []
-      workStances.forEach((obj) => mildTopics.push(obj.topic))
+      let topicsStances = []
+      workStances.forEach((obj) => {
+        mildTopics.push(obj.topic)
+        topicsStances.push(obj.fsStance)
+      })
 
       Cookies.set("topics", JSON.stringify(mildTopics));
+      Cookies.set("fsStances", JSON.stringify(topicsStances))
       Cookies.set("helpPreTask", "true")
     
 

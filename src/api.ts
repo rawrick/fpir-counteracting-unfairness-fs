@@ -33,17 +33,21 @@ export const createUser = async (
   //Fetch preStudyQuestions
   const preStudyQuestions = await axios.get(routes.preStudyQuestions);
 
+  const finishedUsers = await axios.get(routes.demographics);
 
+  const userIds = finishedUsers.data.map(user => user.userId);
 
+  console.log("userIDs:" + userIds);
 
-  console.log(preStudyQuestions);
+  const filteredPreStudyQuestions = preStudyQuestions.data.filter(question => userIds.includes(question.userId));
 
-  
+  console.log("filtered:" + JSON.stringify(filteredPreStudyQuestions));
+
   //Count
   const conditionCounts = possibleConditions.reduce(
     (counts, condition) => ({
       ...counts,
-      [condition]: preStudyQuestions.data.filter(
+      [condition]: filteredPreStudyQuestions.filter(
         (question) => question.condition === condition
       ).length,
     }),

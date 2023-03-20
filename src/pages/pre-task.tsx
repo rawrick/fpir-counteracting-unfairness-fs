@@ -22,17 +22,19 @@ const PreTask: NextPage = () => {
   const [explanation, setExplanation] = useState<string>("");
   const [snippetId, setSnippetId] = useState<number>();
   const userId = Cookies.get("userId");
-  const stance = Cookies.get("stance");
   const router = useRouter();
 
   const topicsString = Cookies.get("topics")
+  const stanceString = Cookies.get("fsStances")
 
-  if (topicsString === undefined) {
+  if (topicsString === undefined || stanceString === undefined) {
     return undefined
   }
 
   const topics = JSON.parse(topicsString)
+  const stances = JSON.parse(stanceString)
   const topic = topics.shift()
+  const stance = stances.shift()
 
   preventBackButton();
 
@@ -88,7 +90,9 @@ const PreTask: NextPage = () => {
     // Set Cookies
     Cookies.set("helpPreTask", "NEIN")
     Cookies.set("topics", JSON.stringify(topics))
+    Cookies.set("fsStances", JSON.stringify(stances))
     Cookies.set("topic", topic)
+    Cookies.set("stance", stance)
     
 
     // Replace new lines of explanation with actual <br> tags

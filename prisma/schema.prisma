@@ -29,6 +29,7 @@ model PreStudyQuestion {
   userId    String   @unique @map("user_id") @db.ObjectId
   topic     String
   stance    Int
+  fsStance  String?
   condition String?
   createdAt DateTime @default(now()) @map("created_at")
 }

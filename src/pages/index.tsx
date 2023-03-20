@@ -40,9 +40,9 @@ const Home: NextPage = () => {
     setIsSubmitting(true);
 
     try {
-      const stance = possibleStance[getRandomInt(0, 1)];
-      Cookies.set("stance", stance);
-      const user = await createUser(prolificId, stance);
+      //const stance = possibleStance[getRandomInt(0, 1)];
+      //Cookies.set("stance", stance);
+      const user = await createUser(prolificId, " ");
       Cookies.set("userId", user.id);
       const usersCondition = Cookies.get("lowestCondition");
       Cookies.set("condition", usersCondition);

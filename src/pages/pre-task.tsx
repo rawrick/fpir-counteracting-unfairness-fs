@@ -93,7 +93,7 @@ const PreTask: NextPage = () => {
     Cookies.set("fsStances", JSON.stringify(stances))
     Cookies.set("topic", topic)
     Cookies.set("stance", stance)
-    
+
 
     // Replace new lines of explanation with actual <br> tags
     const explanationWithBreaks = explanation.replace(/\n/g, "<br>");
@@ -107,7 +107,9 @@ const PreTask: NextPage = () => {
 
     try {
       await createPreTaskQuestion(data);
+      
       router.push("/serp");
+      
     } catch (e) {
       console.log(e);
     }

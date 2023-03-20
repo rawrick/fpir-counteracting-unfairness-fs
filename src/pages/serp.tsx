@@ -30,6 +30,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  SubTitle,
 } from 'chart.js';
 
 ChartJS.register(
@@ -62,6 +63,7 @@ const SERP = () => {
   const stance = Cookies.get("stance");
   const snippetId = Cookies.get("snippetId");
   const condition = Cookies.get("condition")
+  
 
   preventBackButton();
 
@@ -70,6 +72,14 @@ const SERP = () => {
     setIsSubmitting(true);
 
     try {
+      const data = {
+        docId: -1,
+        userId,
+        topic,
+        position: -1,
+      };
+      await createPageVisit(data);
+      
       router.push("/post-task");
     } catch (e) {
       console.log(e);
@@ -230,7 +240,14 @@ const SERP = () => {
       }
     },
     barThickness: 50,
-    events: []
+    events: [],
+    plugins: {
+      title: {
+        display: true,
+        text: 'This bar chart shows the document distribution',
+        position: 'bottom'
+      },
+    }
   };
 
   let hide = false

@@ -97,7 +97,7 @@ const PreStudy = () => {
         router.push("/thank-you");
         return;
       }
-     
+
       let workStances = mildStances;
 
       workStances.sort(() => Math.random() - 0.5)
@@ -112,9 +112,9 @@ const PreStudy = () => {
       Cookies.set("topics", JSON.stringify(mildTopics));
       Cookies.set("fsStances", JSON.stringify(topicsStances))
       Cookies.set("helpPreTask", "true")
-    
 
-      router.push("/pre-task");
+      router.push("/description");
+
     } catch (e) {
       console.log(e);
     }

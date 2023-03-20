@@ -242,7 +242,7 @@ const SERP = () => {
       title: {
         display: true,
         text: 'This bar chart shows the document distribution',
-        position: 'bottom'
+        position: 'bottom' as const
       },
     }
   };

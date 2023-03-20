@@ -90,13 +90,13 @@ const PreStudy = () => {
     const mildStances = data.filter((q) => q.stance >= -1 && q.stance <= 1);
 
     try {
-      await createPreStudyQuestions(mildStances);
-
       // If there are no mild stances, redirect to the next page
       if (mildStances.length === 0) {
         router.push("/thank-you");
         return;
       }
+      
+      await createPreStudyQuestions(mildStances);
 
       let workStances = mildStances;
 

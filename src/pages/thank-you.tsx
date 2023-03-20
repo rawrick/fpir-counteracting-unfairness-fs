@@ -14,6 +14,7 @@ const ThankYou: NextPage = () => {
         <h2>Thank You!</h2>
         <div className="space-y-2">
           <p>You've done it! Thank you for your participation.</p>
+          <p>Please click this <a className="text-[#0000ff]" href="https://forms.gle/SyAqHpQeo5pdrqMP9"> <u>Google Forms link</u></a> and fill out the form if you want to receive VP-Stunden</p>
         </div>
       </PageContainer>
     </>

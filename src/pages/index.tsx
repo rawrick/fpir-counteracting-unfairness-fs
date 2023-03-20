@@ -84,7 +84,7 @@ const Home: NextPage = () => {
           </p>
           <ul>
             <li>Your participation is entirely voluntary</li>
-            <li>The online study will last approximately ??? minutes</li>
+            <li>The online study will last approximately 30 minutes</li>
             <li>
               We will record basic personal demographics (age, gender, etc.)
             </li>
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
           <p>
             Your participation in this online study is completely voluntary. You
             will be one of approximately 45 people being surveyed in this pilot
-            study. You may receive ??? VP as compensation for your
+            study. You may receive 0.5 VP as compensation for your
             participation. You may withdraw and discontinue participation at any
             time without penalty or loss of compensation. If you decline to
             participate or withdraw from the online study, no one will be told.
@@ -138,7 +138,7 @@ const Home: NextPage = () => {
           </ol>
           <p>
             Through pre-testing we estimate the completion of this online study
-            to last approximately ?-? minutes.
+            to last approximately 10-30 minutes.
           </p>
         </section>
         <section className="space-y-4">
@@ -148,7 +148,7 @@ const Home: NextPage = () => {
             inconveniences will be minor and are not likely to happen. If any
             discomforts become a problem, you may discontinue your
             participation. Your benefit in participating is your compensation of
-            ??? VP.
+            0.5 VP.
           </p>
         </section>
         <section className="space-y-4">

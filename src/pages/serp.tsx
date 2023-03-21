@@ -20,6 +20,28 @@ import {
 } from "../components";
 import { useScroll } from "../hooks/useScroll";
 import { IFeaturedSnippet, IRegularSnippet } from "../types";
+import { Bar } from 'react-chartjs-2';
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  SubTitle,
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
 
 const SERP = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -40,6 +62,8 @@ const SERP = () => {
   const topic = Cookies.get("topic");
   const stance = Cookies.get("stance");
   const snippetId = Cookies.get("snippetId");
+  const condition = Cookies.get("condition")
+  
 
   preventBackButton();
 
@@ -48,16 +72,18 @@ const SERP = () => {
     setIsSubmitting(true);
 
     try {
-      await updateUserLogic(userId, featuredSnippet.logic);
-
-      const [res] = await Promise.allSettled([
-        new Promise((resolve) => setTimeout(resolve, 800)),
-      ]);
+      const data = {
+        docId: -1,
+        userId,
+        topic,
+        position: -1,
+      };
+      await createPageVisit(data);
+      
       router.push("/post-task");
     } catch (e) {
       console.log(e);
     }
-
     setIsSubmitting(false);
   };
 
@@ -68,7 +94,6 @@ const SERP = () => {
       userId,
       topic,
       position,
-      url,
     };
 
     // Send data to backend
@@ -143,15 +168,101 @@ const SERP = () => {
   if (!snippets) return <div>Loading...</div>;
   if (snippetError) return <div>Error: {snippetError.message}</div>;
 
+  // Bar
+
+  const biasedLower = 5;
+  const biasedUpper = 30;
+  const equalLower = 45;
+  const equalUpper = 55;
+
+  const colorPro = '#0097AC';
+  const colorCon = '#ffa500';
+
+  let proValue = +Cookies.get("proValue");
+
+  if (proValue === -1) {
+    switch (condition) {
+      case "equalBar":
+        proValue = Math.floor(Math.random() * (equalUpper - equalLower) + equalLower);
+        Cookies.set("proValue", "" + proValue)
+        break;
+      case "biasedBar":
+        proValue = Math.floor(Math.random() * (biasedUpper - biasedLower) + biasedLower);
+        if (stance === "neg") {
+          proValue = 100 - proValue
+        }
+        Cookies.set("proValue", "" + proValue)
+        break;
+      default:
+        break;
+    }
+  }
+
+  const queriesProCon = {
+    "schoolUniforms" : ["Students should wear school uniforms", "Students should not wear school uniforms"],
+    "propertyRights" : ["Intellectual property rights should exist", "Intellectual property rights should not exist"],
+    "obesity" : ["Obesity is a disease", "Obesity is not a disease"],
+    "cellphoneRadiation" : ["Cell phone radiation is safe", "Cell phone radiation is not safe"],
+    "zoos" : ["Zoos should exist", "Zoos should not exist"],
+    "networkingSites" : ["Social networking sites are good for our society", "Social networking sites are bad for our society"]
+  }
+
+  const chartData = {
+    labels: [''],
+    datasets: [
+      {
+        label: queriesProCon[topic][0],
+        backgroundColor: colorPro,
+        data: [proValue]
+      },
+      {
+        label: queriesProCon[topic][1],
+        backgroundColor: colorCon,
+        data: [100 - proValue]
+      }
+    ]
+  };
+
+  const options = {
+    responsive: true,
+    indexAxis: 'y' as const,
+    scales: {
+      x: {
+        stacked: true,
+        display: false
+      },
+      y: {
+        stacked: true,
+        display: false
+      }
+    },
+    barThickness: 50,
+    events: [],
+    plugins: {
+      title: {
+        display: true,
+        text: 'This bar chart shows the document distribution',
+        position: 'bottom' as const
+      },
+    }
+  };
+
+  let hide = false
+  if (condition === 'noBar') {
+    hide = true
+  }
+
   return (
     <>
       <Head />
       <SearchHeader query={query} />
       <form
-        className={`ml-[170px] max-w-[652px] py-8 space-y-14 ${
-          isScrolled && "mt-20"
-        }`}
+        className={`ml-[170px] max-w-[652px] py-8 space-y-14 ${isScrolled && "mt-20"
+          }`}
         onSubmit={submitRating}>
+        <div hidden={hide}>
+          <Bar options={options} data={chartData} className={`max-h-[100px]`} />
+        </div>
         <FeaturedSnippet
           onClick={() =>
             handleClick(featuredSnippet.id, 1, featuredSnippet.url)

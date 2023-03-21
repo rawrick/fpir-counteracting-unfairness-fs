@@ -9,8 +9,8 @@
   "schoolUniforms": {
     "topic": "Should students wear school uniform?",
     "queries": [
-      "arguments opposing Obesity a Disease?",
-      "arguments supporting Obesity a Disease?"
+      "arguments opposing school uniforms?",
+      "arguments supporting school uniforms?"
     ]
   },
   "obesity": {
@@ -18,6 +18,27 @@
     "queries": [
       "arguments opposing Obesity a Disease?",
       "arguments supporting Obesity a Disease?"
+    ]
+  },
+  "zoos": {
+    "topic": "Should zoos exist?",
+    "queries": [
+      "arguments opposing zoos?",
+      "arguments supporting zoos?"
+    ]
+  },
+  "networkingSites": {
+    "topic": "Are social networking sites good for our society?",
+    "queries": [
+      "arguments opposing social networking sites good for our society?",
+      "arguments supporting social networking sites good for our society?"
+    ]
+  },
+  "cellphoneRadiation": {
+    "topic": "Is cell phone radiation safe?",
+    "queries": [
+      "arguments opposing cell phone radiation safe?",
+      "arguments supporting cell phone radiation safe?"
     ]
   }
 }

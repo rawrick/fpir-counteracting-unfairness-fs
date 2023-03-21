@@ -5,6 +5,7 @@ import { clamp } from "../../lib/clamp";
 import { preventBackButton } from "../../lib/prevent-back-button";
 import { createPreStudyQuestions } from "../api";
 import { Button, Head, LikertScale, PageContainer } from "../components";
+import { getRandomInt } from "../../lib/rand-int";
 
 const questions = [
   {
@@ -22,7 +23,24 @@ const questions = [
     question: "Is Obesity a Disease?",
     value: null,
   },
+  {
+    topic: "cellphoneRadiation",
+    question: "Is cell phone radiation safe?",
+    value: null,
+  },
+  {
+    topic: "zoos",
+    question: "Should Zoos exist?",
+    value: null,
+  },
+  {
+    topic: "networkingSites",
+    question: "Are social networking sites good for our society?",
+    value: null,
+  },
 ];
+
+const possibleStance = ["pos", "neg"];
 
 interface LikertQuestion {
   topic: string;
@@ -34,6 +52,7 @@ const PreStudy = () => {
   const [question, setQuestion] = useState<LikertQuestion[]>(questions);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const userId = Cookies.get("userId");
+  const userCondition = Cookies.get("lowestCondition");
 
   preventBackButton();
 
@@ -61,7 +80,9 @@ const PreStudy = () => {
       return {
         userId,
         topic: q.topic,
+        fsStance: possibleStance[getRandomInt(0, 1)],
         stance: clamp(q.value),
+        condition: userCondition,
       };
     });
 
@@ -69,20 +90,31 @@ const PreStudy = () => {
     const mildStances = data.filter((q) => q.stance >= -1 && q.stance <= 1);
 
     try {
-      await createPreStudyQuestions(data);
-
       // If there are no mild stances, redirect to the next page
       if (mildStances.length === 0) {
         router.push("/thank-you");
         return;
       }
+      
+      await createPreStudyQuestions(mildStances);
 
-      // Add random mildStance to the cookie
-      const randomMildStance =
-        mildStances[Math.floor(Math.random() * mildStances.length)];
-      Cookies.set("topic", randomMildStance.topic);
+      let workStances = mildStances;
 
-      router.push("/pre-task");
+      workStances.sort(() => Math.random() - 0.5)
+
+      let mildTopics = []
+      let topicsStances = []
+      workStances.forEach((obj) => {
+        mildTopics.push(obj.topic)
+        topicsStances.push(obj.fsStance)
+      })
+
+      Cookies.set("topics", JSON.stringify(mildTopics));
+      Cookies.set("fsStances", JSON.stringify(topicsStances))
+      Cookies.set("helpPreTask", "true")
+
+      router.push("/description");
+
     } catch (e) {
       console.log(e);
     }

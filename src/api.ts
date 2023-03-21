@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import {
   PostTaskQuestion,
   PreStudyQuestion,
@@ -13,19 +14,59 @@ const routes = {
   preTaskQuestions: "/api/pretaskquestions",
   postTaskQuestions: "/api/posttaskquestions",
   pageVisits: "/api/pagevisits",
+  clicks: "/api/clicks",
   demographics: "/api/demographics",
 };
+
+const possibleConditions = ['noBar', 'equalBar', 'biasedBar'];
 
 /**
  * Creates a new user in the database.
  * @param prolificId The prolific id of the user.
  * @returns The user that was created.
  */
+
+/** VERSION 2.0 */
 export const createUser = async (
   prolificId: string,
   stance: string
 ): Promise<User> => {
-  const res = await axios.post(routes.users, { prolificId, stance });
+  //Fetch preStudyQuestions
+  const preStudyQuestions = await axios.get(routes.preStudyQuestions);
+
+  const finishedUsers = await axios.get(routes.demographics);
+
+  const userIds = finishedUsers.data.map(user => user.userId);
+
+  const filteredPreStudyQuestions = preStudyQuestions.data.filter(question => userIds.includes(question.userId));
+
+  //Count
+  const conditionCounts = possibleConditions.reduce(
+    (counts, condition) => ({
+      ...counts,
+      [condition]: filteredPreStudyQuestions.filter(
+        (question) => question.condition === condition
+      ).length,
+    }),
+    {}
+  );
+
+  //Get Lowest Condition
+  const lowestCountCondition = possibleConditions.reduce(
+    (lowestCondition, condition) =>
+      conditionCounts[condition] < conditionCounts[lowestCondition]
+        ? condition
+        : lowestCondition,
+    possibleConditions[0]
+  );
+
+  Cookies.set("lowestCondition", lowestCountCondition);
+
+  //Actually create User
+  const res = await axios.post(routes.users, {
+    prolificId,
+    stance,
+  });
 
   if (res?.status === 201) {
     return res.data;
@@ -33,6 +74,7 @@ export const createUser = async (
     throw new Error("Failed to create user");
   }
 };
+
 
 /**
  * Creates a new entry for the responses to the pre-study questions.
@@ -89,7 +131,10 @@ export const createPostTaskQuestion = async (
  * @returns The page visit that was created.
  */
 export const createPageVisit = async (pageVisit): Promise<void> => {
-  const res = await axios.post(routes.pageVisits, pageVisit);
+  var config = {
+    headers: {'Access-Control-Allow-Origin': '*'}
+  };
+  const res = await axios.post(routes.clicks, pageVisit, config);
 
   if (res?.status === 201) {
     return res.data;
@@ -129,5 +174,21 @@ export const updateUserLogic = async (userId: string, logic: string) => {
     return res.data;
   } else {
     throw new Error("Failed to update user logic");
+  }
+};
+
+/**
+ *
+ * @param userId The id of the user.
+ * @param condition The condition that the user got presented in the Featured Snippet.
+ * @returns The user that was updated.
+ */
+export const updateUserCondition = async (userId: string, logic: string) => {
+  const res = await axios.post(`${routes.users}/${userId}`, { logic });
+
+  if (res?.status === 200) {
+    return res.data;
+  } else {
+    throw new Error("Failed to update user condition");
   }
 };

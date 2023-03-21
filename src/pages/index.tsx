@@ -132,13 +132,13 @@ const Home: NextPage = () => {
           </p>
           <ol>
             <li>read and accept the declaration of consent</li>
-            <li>indicate your position on the topics indicated</li>
+            <li>state your position on the topics indicated</li>
             <li>interact with a series of search results</li>
             <li>restate your position and arguments on this issue</li>
           </ol>
           <p>
             Through pre-testing we estimate the completion of this online study
-            to last approximately 10-30 minutes.
+            to last approximately 5-30 minutes.
           </p>
         </section>
         <section className="space-y-4">

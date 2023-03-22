@@ -48,7 +48,7 @@ const PostTask: NextPage = () => {
   );
 
   const { data: preTaskQuestion, error: preTaskQuestionError } = useSWR(
-    () => `/api/pretaskquestions/${userId}`,
+    () => `/api/pretaskquestions/${userId}?userId=${userId}&topic=${topic}`,
     fetcher,
     {
       revalidateOnFocus: false,

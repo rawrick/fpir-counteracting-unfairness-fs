@@ -9,6 +9,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       const preTaskQuestion = await prisma.preTaskQuestion.findFirst({
         where: {
           userId: query.userId as string,
+          topic: query.topic as string,
         },
       });
       res.status(200).json(preTaskQuestion);

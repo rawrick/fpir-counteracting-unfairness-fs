@@ -6,7 +6,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   switch (method) {
     case "GET":
-      console.log(query)
       const preTaskQuestion = await prisma.preTaskQuestion.findFirst({
         where: {
           userId: query.userId as string,
